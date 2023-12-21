@@ -1,0 +1,391 @@
+From 2a3ba23c489dae938ce1e40a5905b70b3f5fb862 Mon Sep 17 00:00:00 2001
+From: SiyaTM <siyatmahlangu@gmail.com>
+Date: Thu, 21 Dec 2023 04:49:41 +0200
+Subject: [PATCH 1/2] changes made
+
+---
+ .idea/.gitignore                              |  3 +
+ .idea/aws.xml                                 | 17 +++++
+ .idea/forage-jpmc-swe-task-1.iml              | 14 ++++
+ .idea/inspectionProfiles/Project_Default.xml  | 67 +++++++++++++++++++
+ .../inspectionProfiles/profiles_settings.xml  |  6 ++
+ .idea/misc.xml                                |  4 ++
+ .idea/modules.xml                             |  8 +++
+ .idea/vcs.xml                                 |  6 ++
+ client3.py                                    | 10 ++-
+ 9 files changed, 132 insertions(+), 3 deletions(-)
+ create mode 100644 .idea/.gitignore
+ create mode 100644 .idea/aws.xml
+ create mode 100644 .idea/forage-jpmc-swe-task-1.iml
+ create mode 100644 .idea/inspectionProfiles/Project_Default.xml
+ create mode 100644 .idea/inspectionProfiles/profiles_settings.xml
+ create mode 100644 .idea/misc.xml
+ create mode 100644 .idea/modules.xml
+ create mode 100644 .idea/vcs.xml
+
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+new file mode 100644
+index 0000000..26d3352
+--- /dev/null
++++ b/.idea/.gitignore
+@@ -0,0 +1,3 @@
++# Default ignored files
++/shelf/
++/workspace.xml
+diff --git a/.idea/aws.xml b/.idea/aws.xml
+new file mode 100644
+index 0000000..03f1bb6
+--- /dev/null
++++ b/.idea/aws.xml
+@@ -0,0 +1,17 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="accountSettings">
++    <option name="activeProfile" value="profile:default" />
++    <option name="activeRegion" value="us-east-1" />
++    <option name="recentlyUsedProfiles">
++      <list>
++        <option value="profile:default" />
++      </list>
++    </option>
++    <option name="recentlyUsedRegions">
++      <list>
++        <option value="us-east-1" />
++      </list>
++    </option>
++  </component>
++</project>
+\ No newline at end of file
+diff --git a/.idea/forage-jpmc-swe-task-1.iml b/.idea/forage-jpmc-swe-task-1.iml
+new file mode 100644
+index 0000000..7d8bf9e
+--- /dev/null
++++ b/.idea/forage-jpmc-swe-task-1.iml
+@@ -0,0 +1,14 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="PYTHON_MODULE" version="4">
++  <component name="NewModuleRootManager">
++    <content url="file://$MODULE_DIR$">
++      <excludeFolder url="file://$MODULE_DIR$/fullstack-ai-chatbot/Server" />
++    </content>
++    <orderEntry type="jdk" jdkName="Python 3.7 (forage-jpmc-swe-task-1)" jdkType="Python SDK" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++  <component name="PyDocumentationSettings">
++    <option name="format" value="PLAIN" />
++    <option name="myDocStringFormat" value="Plain" />
++  </component>
++</module>
+\ No newline at end of file
+diff --git a/.idea/inspectionProfiles/Project_Default.xml b/.idea/inspectionProfiles/Project_Default.xml
+new file mode 100644
+index 0000000..bcc585e
+--- /dev/null
++++ b/.idea/inspectionProfiles/Project_Default.xml
+@@ -0,0 +1,67 @@
++<component name="InspectionProjectProfileManager">
++  <profile version="1.0">
++    <option name="myName" value="Project Default" />
++    <inspection_tool class="PyArgumentListInspection" enabled="false" level="WARNING" enabled_by_default="false" />
++    <inspection_tool class="PyDataclassInspection" enabled="false" level="WARNING" enabled_by_default="false" />
++    <inspection_tool class="PyGlobalUndefinedInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
++    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
++      <option name="ignoredPackages">
++        <value>
++          <list size="6">
++            <item index="0" class="java.lang.String" itemvalue="sympy" />
++            <item index="1" class="java.lang.String" itemvalue="pytest" />
++            <item index="2" class="java.lang.String" itemvalue="pywin32" />
++            <item index="3" class="java.lang.String" itemvalue="Pillow" />
++            <item index="4" class="java.lang.String" itemvalue="decouple" />
++            <item index="5" class="java.lang.String" itemvalue="pygame" />
++          </list>
++        </value>
++      </option>
++    </inspection_tool>
++    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
++      <option name="ignoredErrors">
++        <list>
++          <option value="E302" />
++          <option value="E301" />
++          <option value="E231" />
++          <option value="E261" />
++          <option value="E305" />
++          <option value="E303" />
++          <option value="E127" />
++        </list>
++      </option>
++    </inspection_tool>
++    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
++      <option name="ignoredErrors">
++        <list>
++          <option value="N803" />
++          <option value="N801" />
++          <option value="N802" />
++          <option value="N806" />
++        </list>
++      </option>
++    </inspection_tool>
++    <inspection_tool class="PyPropertyDefinitionInspection" enabled="false" level="WARNING" enabled_by_default="false" />
++    <inspection_tool class="PyShadowingBuiltinsInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
++      <option name="ignoredNames">
++        <list>
++          <option value="object" />
++        </list>
++      </option>
++    </inspection_tool>
++    <inspection_tool class="PyStatementEffectInspection" enabled="false" level="WARNING" enabled_by_default="false" />
++    <inspection_tool class="PyTypeCheckerInspection" enabled="false" level="WARNING" enabled_by_default="false" />
++    <inspection_tool class="PyUnboundLocalVariableInspection" enabled="false" level="WARNING" enabled_by_default="false" />
++    <inspection_tool class="PyUnreachableCodeInspection" enabled="false" level="WARNING" enabled_by_default="false" />
++    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="false" level="WARNING" enabled_by_default="false">
++      <option name="ignoredIdentifiers">
++        <list>
++          <option value="aws_cdk_2.aws_cdk_2_stack.sqs" />
++          <option value="sns.Topic" />
++          <option value="exhaust.dual_exit_exhaust" />
++          <option value="engine.capulet_engine.*" />
++        </list>
++      </option>
++    </inspection_tool>
++  </profile>
++</component>
+\ No newline at end of file
+diff --git a/.idea/inspectionProfiles/profiles_settings.xml b/.idea/inspectionProfiles/profiles_settings.xml
+new file mode 100644
+index 0000000..105ce2d
+--- /dev/null
++++ b/.idea/inspectionProfiles/profiles_settings.xml
+@@ -0,0 +1,6 @@
++<component name="InspectionProjectProfileManager">
++  <settings>
++    <option name="USE_PROJECT_PROFILE" value="false" />
++    <version value="1.0" />
++  </settings>
++</component>
+\ No newline at end of file
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+new file mode 100644
+index 0000000..fb0d698
+--- /dev/null
++++ b/.idea/misc.xml
+@@ -0,0 +1,4 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.7 (forage-jpmc-swe-task-1)" project-jdk-type="Python SDK" />
++</project>
+\ No newline at end of file
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+new file mode 100644
+index 0000000..973696f
+--- /dev/null
++++ b/.idea/modules.xml
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/.idea/forage-jpmc-swe-task-1.iml" filepath="$PROJECT_DIR$/.idea/forage-jpmc-swe-task-1.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+index 0000000..94a25f7
+--- /dev/null
++++ b/.idea/vcs.xml
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+diff --git a/client3.py b/client3.py
+index 3fc09b7..5f7bdda 100644
+--- a/client3.py
++++ b/client3.py
+@@ -35,14 +35,16 @@ def getDataPoint(quote):
+     stock = quote['stock']
+     bid_price = float(quote['top_bid']['price'])
+     ask_price = float(quote['top_ask']['price'])
+-    price = bid_price
++    price = (bid_price+ask_price)/2
+     return stock, bid_price, ask_price, price
+ 
+ 
+ def getRatio(price_a, price_b):
+     """ Get ratio of price_a and price_b """
+     """ ------------- Update this function ------------- """
+-    return 1
++    if (price_b == 0):
++        return
++    return price_a/price_b
+ 
+ 
+ # Main
+@@ -52,8 +54,10 @@ if __name__ == "__main__":
+         quotes = json.loads(urllib.request.urlopen(QUERY.format(random.random())).read())
+ 
+         """ ----------- Update to get the ratio --------------- """
++        price = {}
+         for quote in quotes:
+             stock, bid_price, ask_price, price = getDataPoint(quote)
++            prices[stock] = price
+             print("Quoted %s at (bid:%s, ask:%s, price:%s)" % (stock, bid_price, ask_price, price))
+ 
+-        print("Ratio %s" % getRatio(price, price))
++        print("Ratio %s" % getRatio(prices["ABC"], prices["DEF"]))
+-- 
+2.37.3.windows.1
+
+
+From 2bf237dfcc15bf10a907922c4edf0abb94d31d47 Mon Sep 17 00:00:00 2001
+From: SiyaTM <siyatmahlangu@gmail.com>
+Date: Thu, 21 Dec 2023 14:11:00 +0200
+Subject: [PATCH 2/2] add tests
+
+---
+ .../inspectionProfiles/profiles_settings.xml  |   1 +
+ __pycache__/client3.cpython-37.pyc            | Bin 0 -> 1122 bytes
+ __pycache__/client_test.cpython-37.pyc        | Bin 0 -> 1521 bytes
+ client3.py                                    |   1 +
+ client_test.py                                |  42 +++++++++++-------
+ 5 files changed, 29 insertions(+), 15 deletions(-)
+ create mode 100644 __pycache__/client3.cpython-37.pyc
+ create mode 100644 __pycache__/client_test.cpython-37.pyc
+
+diff --git a/.idea/inspectionProfiles/profiles_settings.xml b/.idea/inspectionProfiles/profiles_settings.xml
+index 105ce2d..dd4c951 100644
+--- a/.idea/inspectionProfiles/profiles_settings.xml
++++ b/.idea/inspectionProfiles/profiles_settings.xml
+@@ -1,5 +1,6 @@
+ <component name="InspectionProjectProfileManager">
+   <settings>
++    <option name="PROJECT_PROFILE" value="Default" />
+     <option name="USE_PROJECT_PROFILE" value="false" />
+     <version value="1.0" />
+   </settings>
+diff --git a/__pycache__/client3.cpython-37.pyc b/__pycache__/client3.cpython-37.pyc
+new file mode 100644
+index 0000000000000000000000000000000000000000..1550d2480fc5d5c3ba760aa748b1cae19b8c9043
+GIT binary patch
+literal 1122
+zcmYjQOK%%D5GMDfl`Of5;zxu41zR9!Rn)PI9%>kQHFi><C=4e-5R_1{pqC?g?bWVK
+zQf;irC*_zQAzupghqQ-Ya_2Rt+<WS&vy>f_#JtGa;Wv+c)M_;du0MaD!Mi#k?<?bK
+zp-mnl>A#UlB56+eLQ+nh?QvgvJdi#QWgx>hghw)xHIy}oWqjhPzh1qCIy4}h(HY$%
+zzfAcOka-jQ<JNo`g83&v=k$VH&<i@hR!M$6BfR};8?K}G7QX=z+?df`z*qPxU*m0P
+z!#b?oC2&*LVFgxU4ch%+jm#(|r{-mK-hdjc%cTxM-t3T>cX|8dCFby)bXy-VAF@CB
+z?8unW&gN!brXoKowb|L;+TPkc9fLZ1kjZ<m&$E9hAt{nuA@Tre7fC-vHpO@ya!yU9
+zc^x8se2t!a&JI4>{?wcL>qLgP$ayfOl{F3e0V0Ve-?0N#%5e%z<T*1(zzP5flKm?3
+zF=%E=Hh=<@FzCUgFk)0@g<&?-rc6(4&6K0$Fq1YMsVs$sE%eC;5Ak)W4f}a1OgFUQ
+z>9{nYs$*Nn50Zs{9eo$7s#5!ds3jEt{<yo-d!a$;p3csM=^dP<M?wt|>oKH8_kIGQ
+zimVvuUcXdg02{}nVY;DzgAIcLH@@kmc?N~~_Ri?cHV0t#5cq)uj?uLnIX|Y?a5t%H
+z;aOS%t5zi|az$Q2WlAN*L263xIhJ`!ZxJk<Klz;f0ES^*vXYg3=CVly6NS9g51FbO
+zx9<|_dc1b&a-|%)iv??<qm2>gvnt+KXz2(UL5u-a%kDNwh9WDHWb(z+s*;l3)=U`o
+zCDwB1w*H!7-cGt_Q0q=&7Y+Ta|NWy~>+d~&((UlzSeFHl6e2B$e0i+$JUhIj0LM-n
+z9xZGhK7H}{+0T~lyXt&|P>3NUi48Jrr42F004z;xh)tH7*RG<}FiJUs!baGhp)fX3
+zAf%1l3~1MB6=POz98~q6tEwkFa^STaro#NMK-EyFMV0Ojab9z{zlultQ)Ds4?FYEy
+TMqH1*Hf4T58`#^J-t_(hOWh%D
+
+literal 0
+HcmV?d00001
+
+diff --git a/__pycache__/client_test.cpython-37.pyc b/__pycache__/client_test.cpython-37.pyc
+new file mode 100644
+index 0000000000000000000000000000000000000000..95538865e244d1ca29f1ce1d3120d5e462fe3863
+GIT binary patch
+literal 1521
+zcmdT^Pfrs;6rb7cw#!ofi1-IJ%7IH`O4_0{5JCz?<v>V{7?Y;BS$BrIwA+@MX_N*|
+z;MGsSL5^Nby!j#U3(U=UBKiqD`Q9#|5fk<3B=5Ix=k0s*=DpwB#eo5bz<NKi&)X?N
+zKI6;jN`O)Vk+T4dFxn(ld>Ty}8dZam2ZWg{u}@fnlTCBatR}d{tcD?`IeC*jBoure
+zkxcR!{K;yD>U5o}B~N*kcF<Bj?w&3KloE)%0l-O>GEy}dWyU_Kn(-;s1hX)jcFN6w
+zx6~S!%BS!-E)xWAQU;N)0nnG32L=N#mW;F%vsvGP#T?duVo9@s6U!i4>c%d8S=pgW
+zWPN$p*dcF-qC3VO2pbwBfWu>iU5K=iGws~o6~ZoFCmV@FsL<B@6Q~$uJ-S-|cm!+Z
+zY3X<Z(#sgy>WIMSIw6A|?_De8@-x|7A)C*S7Yehv>Dj5=<lSQ7&fTf{tyf<jez*ya
+zAvpF1bCdbp%uMml^h~i>%xiODv7E7VO0_$#CmXs?1tC<%3p?@Nvw&#>#FDD*H|k#@
+z)T;&r!|v9XKlMi6y;v_DKZG}JF5SB?20#=22o^#gz%h0QGVb@J<U-xs>UvEP?U|51
+zZ*J)1R=2IV)K>I-OT=aH__kV}tvv=0S(CxGr)rgL|G6i^ifC_gU&-1E_e3jb)n#p?
+zExbC<ZgxUHD_`)ef}3RXH9u;!3z5}iXIqb>;{MDb*Y}!!x9KTf!D1%iR5=Jh42KR=
+zhmM*KouIwjKNvIlrx^borH<B10-KpJ;*Mbv{)$fm2L2qMgpHxBsP6(ND&|5OHKfKF
+zfdtn1j6h-tKNvp!>K6iu3t)i!M$jG;M_fdG6yXvA5+;T#py~Xd+O!z32ZBT6#oBYP
+zwICZ9TVlMQd+*RBu)v|cxqo25xzMXHU$*PEypX%Dc3d}Xvu+dhwCmz9#1?TC4i{qx
+zKW-CgcqM_qC>$w?4YH}7wuhoU3>|tw%XKp;ZFgIN!n;>fG5M#WdTDzN_R1a%6NVAj
+c0CWPqes`3%=i&_K@%JdPqc%;OBe!h&9oxlnQUCw|
+
+literal 0
+HcmV?d00001
+
+diff --git a/client3.py b/client3.py
+index 5f7bdda..a0bf7ca 100644
+--- a/client3.py
++++ b/client3.py
+@@ -43,6 +43,7 @@ def getRatio(price_a, price_b):
+     """ Get ratio of price_a and price_b """
+     """ ------------- Update this function ------------- """
+     if (price_b == 0):
++        # when price_b is 0 avoid throwing ZeroDivisionError
+         return
+     return price_a/price_b
+ 
+diff --git a/client_test.py b/client_test.py
+index af2bf26..28adde6 100644
+--- a/client_test.py
++++ b/client_test.py
+@@ -1,24 +1,36 @@
+ import unittest
+ from client3 import getDataPoint
+ 
+-class ClientTest(unittest.TestCase):
+-  def test_getDataPoint_calculatePrice(self):
+-    quotes = [
+-      {'top_ask': {'price': 121.2, 'size': 36}, 'timestamp': '2019-02-11 22:06:30.572453', 'top_bid': {'price': 120.48, 'size': 109}, 'id': '0.109974697771', 'stock': 'ABC'},
+-      {'top_ask': {'price': 121.68, 'size': 4}, 'timestamp': '2019-02-11 22:06:30.572453', 'top_bid': {'price': 117.87, 'size': 81}, 'id': '0.109974697771', 'stock': 'DEF'}
+-    ]
+-    """ ------------ Add the assertion below ------------ """
+-
+-  def test_getDataPoint_calculatePriceBidGreaterThanAsk(self):
+-    quotes = [
+-      {'top_ask': {'price': 119.2, 'size': 36}, 'timestamp': '2019-02-11 22:06:30.572453', 'top_bid': {'price': 120.48, 'size': 109}, 'id': '0.109974697771', 'stock': 'ABC'},
+-      {'top_ask': {'price': 121.68, 'size': 4}, 'timestamp': '2019-02-11 22:06:30.572453', 'top_bid': {'price': 117.87, 'size': 81}, 'id': '0.109974697771', 'stock': 'DEF'}
+-    ]
+-    """ ------------ Add the assertion below ------------ """
+ 
++class ClientTest(unittest.TestCase):
++    def test_getDataPoint_calculatePrice(self):
++        quotes = [
++            {'top_ask': {'price': 121.2, 'size': 36}, 'timestamp': '2019-02-11 22:06:30.572453',
++             'top_bid': {'price': 120.48, 'size': 109}, 'id': '0.109974697771', 'stock': 'ABC'},
++            {'top_ask': {'price': 121.68, 'size': 4}, 'timestamp': '2019-02-11 22:06:30.572453',
++             'top_bid': {'price': 117.87, 'size': 81}, 'id': '0.109974697771', 'stock': 'DEF'}
++        ]
++        """ ------------ Add the assertion below ------------ """
++        for quote in quotes:
++            self.assertEqual(getDataPoint(quote), (quote['stock'], quote['top_bid']['price'], quote['top_ask']['price'],
++                                                   (quote['top_bid']['price'] + quote['top_ask']['price']) / 2))
+ 
+-  """ ------------ Add more unit tests ------------ """
++    def test_getDataPoint_calculatePriceBidGreaterThanAsk(self):
++        quotes = [
++            {'top_ask': {'price': 119.2, 'size': 36}, 'timestamp': '2019-02-11 22:06:30.572453',
++             'top_bid': {'price': 120.48, 'size': 109}, 'id': '0.109974697771', 'stock': 'ABC'},
++            {'top_ask': {'price': 121.68, 'size': 4}, 'timestamp': '2019-02-11 22:06:30.572453',
++             'top_bid': {'price': 117.87, 'size': 81}, 'id': '0.109974697771', 'stock': 'DEF'}
++        ]
++        """ ------------ Add the assertion below ------------ """
++        for quote in quotes:
++            self.assertEqual(getDataPoint(quote),
++                             (quote['stock'],
++                              quote['top_bid']['price'],
++                              quote['top_ask']['price'],
++                              (quote['top_bid']['price'] + quote['top_ask']['price']) / 2))
+ 
++    """ ------------ Add more unit tests ------------ """
+ 
+ 
+ if __name__ == '__main__':
+-- 
+2.37.3.windows.1
+
